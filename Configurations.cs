@@ -37,5 +37,11 @@ namespace LCNET_Management_Bot
 
         // The image shown on the halloween event info embed.
         internal static string HalloweenEventPictureUrl = "https://www.publicdomainpictures.net/pictures/540000/nahled/exploring-the-colors-of-halloween.jpg";
+
+
+        // Add a gdpr link for your user.
+        internal static string GDPRUrl = "";
+        // Add a link for user informations, regarding bot functions like commands.
+        internal static string DocsUrl = "";
     }
 }

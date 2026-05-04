@@ -36,7 +36,7 @@ namespace LCNET_Management_Bot.Language
             #region BOT TALKING
             {"botDeveloper",        "My developer is <@278561097366241300> and I am owned by the Lost City community."},
             {"iCanDo",              "I am an administration bot and my duty is to help to make this server more secure. I also have some useful functions for server administrators and users. You can see what I can " +
-                                    "do with the command `/use help` and on my Gitbook page: [Instructions for the Lost City Bot](<https://lost-city.gitbook.io/lcnet-discord-bot/zu-diesem-gitbook>)"},
+                                    $"do with the command `/use help` and on my Gitbook page: [Instructions for the Lost City Bot](<{Configurations.DocsUrl}>)"},
             {"botDontUnderstand",   "I'm sorry, I didn't understand what you wanted to tell me. Unfortunately, I'm not an AI and can only react to certain keywords and word chains. Please try to phrase your question differently."},
             {"timerStartet",        "Looks like you want to start a timer."},
             #endregion
@@ -183,8 +183,7 @@ namespace LCNET_Management_Bot.Language
             {"helpTitleGuild",      "Commands for server owner:\n"},
             {"helpTextGuild",       "# Commands for guild owner\n`/guild channel` - Set the guild channel for news and logs.\n`/guild gated` - Send the gated community message.\n`/guild member` - Set the member role for gated community.\n" +
                                     "`/guild permissions` - Set the permissions for bot usage.\n`/guild points` - Change the name of the points system.\n`guild removedata` - Removing all date relevant to your server.\n" +
-                                    "`/guild settings` - Change settings for your server.\n`/guild status` - Shows your server settings.\n`/guild tickets` - Set the category for tickets.\n\n" +
-                                    "[Data protection and imprint](<https://lost-city-1.gitbook.io/management-bot-en>)\n[Installationsanleitung](<https://lost-city-1.gitbook.io/management-bot-de/bot-installation>)"},
+                                    "`/guild settings` - Change settings for your server.\n`/guild status` - Shows your server settings.\n`/guild tickets` - Set the category for tickets."},
             {"guildStatusText",     "## Informations about the server\nCreated on: {9} by {10}.\nDescription: {11}\n\nThe server is currently boosted {12} times and is therefore at " +
                                     "boost level {13}.\nThe server has `{14}` specified as the country with the country flag {15} and the voice channels are hosted in {16}.\nThe " +
                                     "verification level is {17} and the server's NSFW level is {18}.\n\nNumber of...\nEmotes: {19}\nStickers: {20}\nRoles: {21}\nCategories: {22}\n" +
@@ -197,9 +196,9 @@ namespace LCNET_Management_Bot.Language
                                     // 18 = nsfw level, 19 = count emotes, 20 = count sticker, 21 = count roles, 22 = count category, 23 = count channel, 24 = voice channel,
                                     // 25 = count text channel, 26 = count forum, 27 = count thread, 28 = count stages, 29 = count events, 30 = channel list
             {"helpTitleUser",       "This are the user commands:\n"}, // 0 = guild name
-            {"imprintGDPR",         "[Data protection and imprint](<https://lost-city-1.gitbook.io/management-bot-en>)\n[Bot functions](<https://lost-city-1.gitbook.io/management-bot-de/bot-installation>)"},
+            {"imprintGDPR",         $"[Data protection and imprint](<{Configurations.GDPRUrl}>)"},
             {"helpTitleAdmin",      "Commands for administrator:\n"},
-            {"installationLink",    "[Bot functions](<https://lost-city-1.gitbook.io/management-bot-de/bot-installation>)"},
+            {"installationLink",    $"[Bot functions](<{Configurations.DocsUrl}>)"},
             {"helpTitleMod",        "Commands for moderator:\n"},
             {"helpTitleFaction",    "Commands for factions:\n"},
             #endregion
@@ -234,21 +233,21 @@ namespace LCNET_Management_Bot.Language
             {"needToBeRegistered",      "[ :x: ] To use this function we need to store data, so you must be registered. To do so, use `/use register` and accept the GDPR."},
             {"registerUserInfoText",    "Hello **{}**!\nIf you want to use my functions that store your data, you must first agree that I am allowed to store it. I will not read or store any of your data " +
                                         "until you have registered. Push the `Accept GDPR and register for bot` button if you want to register your account and accepting my " +
-                                        "[terms of service and GDPR](<https://lost-city-1.gitbook.io/management-bot-en>)."}, // 0 = user name
+                                        $"[terms of service and GDPR](<{Configurations.GDPRUrl}>)."}, // 0 = user name
             #endregion
 
             #region REGISTER SERVER
             {"guildAlreadyRegistered",      "[ :x: ] Your server is already registered."},
             {"guildRegisterMessage",        "You are about to register your server for the Lost City Bot.\nPress the `Add bot and accept GDPR` button to register your server and accept the " +
-                                            "[Terms of Use and GDPR](<https://lost-city-1.gitbook.io/management-bot-de>) of Lost City."},
+                                            $"[Terms of Use and GDPR](<{Configurations.GDPRUrl}>) of Lost City."},
             {"registrationMissingBot",      "[ :x: ] The bot has not been registered yet, so this function cannot be used! The server owner must register the bot first."},
             {"registerGuildDatabaseError",  "[ :x: ] Your server could not be registered! The error was reported automatically. The bot developer will contact you."},
             {"guildRegisterSuccess",        "[ :white_check_mark: ] Your server has been successfully registered! Please follow now the installation instructions from our " +
-                                            "[GitBook](<https://lost-city-1.gitbook.io/management-bot-en/bot-installation>). If you need help, please contact Vivian."},
+                                            $"[GitBook](<{Configurations.DocsUrl}>). If you need help, please contact Vivian."},
             {"registerGuildOwnerDM",        "Hello {0}!\nYou asked to add me to your server **{1}**.\nI am now here to help you manage your server. " +
-                                            "Please have a look at my [GitBook](<https://lost-city-1.gitbook.io/management-bot-en/bot-installation>). There you will find all the explanations of my functions.\n\n" +
+                                            $"Please have a look at my [GitBook](<{Configurations.DocsUrl}>). There you will find all the explanations of my functions.\n\n" +
                                             "If you did not ask to invite me to your server, you can simply kick me. I do not read any data and do nothing as long as you dont have registered me. Push the " +
-                                            "`Add bot and accept GDPR` button if you want to register me and if you are accepting my [terms of service and GDPR](<https://lost-city-1.gitbook.io/management-bot-en>). " +
+                                            $"`Add bot and accept GDPR` button if you want to register me and if you are accepting my [terms of service and GDPR](<{Configurations.GDPRUrl}>). " +
                                             "With pressing the button, you will also set your personal and the server language ( you can also change both later )."}, // 0 = guild owner name, 1 = guild name
             #endregion
 
@@ -393,11 +392,11 @@ namespace LCNET_Management_Bot.Language
             {"rankListText",                    "{0}. <@{1}> with level {2} ( {3} Points )\n"}, // 0 = rank, 1 = user id, 2 = level, 3 = points
             {"ranksCheckingUser",               "Ranking is loading, this may take a few seconds. Please wait..."},
             {"getMemberInfoText",               "# Welcome to the server **{0}**!\nTo join our server and use the functions of the LCNET bot, you need the member role <@&{1}>.\nBy accepting the " +
-                                                "role, you agree to our rules and the [GDPR](https://lost-city.gitbook.io/lcnet-discord-bot/) of the LCNET bot."}, // 0 = guild name, 1 = member role id
+                                                $"role, you agree to our rules and the [GDPR](<{Configurations.GDPRUrl}>) of the LCNET bot."}, // 0 = guild name, 1 = member role id
             {"getMemberClosedInfoText",         "# Welcome to the server **{0}**!\nTo join our server and use the functions of the LCNET bot, you need the member role <@&{1}>.\nPress the button to " +
                                                 "send a request to the server team. They will then decide whether you will become a member or not. By accepting the role, you agree that a server team " +
                                                 "member can send you a private message ( Open your messages to server members! ) and you agree to our rules and the " +
-                                                "[GDPR](https://lost-city.gitbook.io/lcnet-discord-bot/) of the LCNET bot."}, // 0 = guild name, 1 = member role id
+                                                $"[GDPR](<{Configurations.GDPRUrl}>) of the LCNET bot."}, // 0 = guild name, 1 = member role id
             {"userStatusMessage",               "# <@{2}>\nGot **{0}** bot points.\nCollected **{1}** winter event points.\n\n"}, // 0 = general bot points, 1 = winter event points
             {"userStatusNoGuildPoints",         "Did not collect any server points jet."},
             {"userStatusGuildPointsCaption",    "Collected server points:\n"},
